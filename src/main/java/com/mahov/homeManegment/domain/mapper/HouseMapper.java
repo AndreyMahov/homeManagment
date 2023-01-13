@@ -9,9 +9,8 @@ import org.mapstruct.Mapping;
 public interface HouseMapper {
 
     @Mapping(target = "address", source = "address")
-    @Mapping(target = "ownerId",source = "ownerId")
+    @Mapping(target = "ownerId", source = "ownerId")
     House toHouse(HouseCreateDto houseCreateDto);
-
 
 
 }

@@ -2,7 +2,6 @@ package com.mahov.homeManegment.jwt;
 
 import com.mahov.homeManegment.domain.models.User;
 import com.mahov.homeManegment.repositories.UserRepository;
-
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

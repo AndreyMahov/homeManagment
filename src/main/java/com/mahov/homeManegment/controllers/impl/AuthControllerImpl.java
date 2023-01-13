@@ -5,7 +5,6 @@ import com.mahov.homeManegment.controllers.AuthController;
 import com.mahov.homeManegment.domain.requestDto.authDto.LoginRequest;
 import com.mahov.homeManegment.domain.requestDto.authDto.SignupRequest;
 import com.mahov.homeManegment.services.impl.AuthService;
-import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

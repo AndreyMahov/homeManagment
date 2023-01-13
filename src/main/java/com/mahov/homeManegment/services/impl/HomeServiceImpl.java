@@ -1,9 +1,7 @@
 package com.mahov.homeManegment.services.impl;
 
-import com.mahov.homeManegment.domain.enums.ERole;
 import com.mahov.homeManegment.domain.mapper.HouseMapper;
 import com.mahov.homeManegment.domain.models.House;
-import com.mahov.homeManegment.domain.models.Role;
 import com.mahov.homeManegment.domain.models.User;
 import com.mahov.homeManegment.domain.requestDto.houseDto.HouseCreateDto;
 import com.mahov.homeManegment.repositories.HomeRepository;
@@ -52,28 +50,15 @@ public class HomeServiceImpl implements HomeService {
     public void updateOwner(long id, String ownerName) {
         User newOwner = userRepository.findByName(ownerName).orElseThrow(RuntimeException::new);
         House updateHouse = homeRepository.findById(id).orElseThrow(RuntimeException::new);
-        long countPreviousOwnerHouses =  homeRepository.findAllByOwnerId(updateHouse.getOwnerId())
-                        .stream().count();
-        Optional<User> previousOwner =  userRepository.findById(updateHouse.getOwnerId());
+        long countPreviousOwnerHouses = homeRepository.findAllByOwnerId(updateHouse.getOwnerId())
+                .stream().count();
+        Optional<User> previousOwner = userRepository.findById(updateHouse.getOwnerId());
 
-        if (countPreviousOwnerHouses < 2) {
-            previousOwner.ifPresent(this::resetRoleAndHouse);
-        }
-
-//        if (!newOwner.getRoles().(ERole.ROLE_ADMIN)){
-//            Role role = roleRepository.findByName(ERole.ROLE_ADMIN).orElseThrow(RuntimeException::new);
-//            newOwner.setRole(role);
-//        }
         updateHouse.setOwnerId(newOwner.getId());
         homeRepository.save(updateHouse);
 
     }
 
-    private void resetRoleAndHouse(User previousOwner){
-//        previousOwner.setRole(null);
-//        previousOwner.setHouse(null);
-//        userRepository.save(previousOwner);
-    }
 
     @Override
     public void delete(long id) {

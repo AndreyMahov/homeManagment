@@ -1,7 +1,6 @@
 package com.mahov.homeManegment.config.jwt;
 
 
-
 import com.mahov.homeManegment.jwt.JwtUserDetails;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.MalformedJwtException;

@@ -1,6 +1,5 @@
 package com.mahov.homeManegment.domain.models;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.mahov.homeManegment.domain.enums.ERole;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

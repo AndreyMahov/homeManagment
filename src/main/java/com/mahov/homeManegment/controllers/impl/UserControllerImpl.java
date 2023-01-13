@@ -26,27 +26,27 @@ public class UserControllerImpl {
 
 
     @GetMapping
-    public List<User> getAll(){
-       return userService.find();
+    public List<User> getAll() {
+        return userService.find();
     }
 
     @GetMapping("/{id}")
-    public User get(@PathVariable("id") long id){
+    public User get(@PathVariable("id") long id) {
         return userService.find(id);
     }
 
     @PostMapping
-    public void create(UserDto userDto){
+    public void create(UserDto userDto) {
         userService.create(userDto);
     }
 
     @PutMapping("/{id}")
-    public void update(@PathVariable("id") Long id,@RequestBody UserDto userDto){
-        userService.update(id,userDto);
+    public void update(@PathVariable("id") Long id, @RequestBody UserDto userDto) {
+        userService.update(id, userDto);
     }
 
     @DeleteMapping
-    public void delete(long id){
+    public void delete(long id) {
         userService.delete(id);
     }
 }

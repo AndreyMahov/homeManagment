@@ -25,27 +25,27 @@ public class HouseControllerImpl {
     }
 
     @GetMapping
-    public List<House> getAll(){
-       return homeService.getAll();
+    public List<House> getAll() {
+        return homeService.getAll();
     }
 
     @GetMapping("/{id}")
-    public House get(@PathVariable("id") Long id){
+    public House get(@PathVariable("id") Long id) {
         return homeService.get(id);
     }
 
     @PostMapping
-    public void create(@RequestBody HouseCreateDto houseCreateDto){
+    public void create(@RequestBody HouseCreateDto houseCreateDto) {
         homeService.create(houseCreateDto);
     }
 
     @PutMapping("/{id}")
-    public void update(@PathVariable("id") long id, @RequestBody String ownerName){
+    public void update(@PathVariable("id") long id, @RequestBody String ownerName) {
         homeService.updateOwner(id, ownerName);
     }
 
     @DeleteMapping("/id")
-    public void delete(@PathVariable("id") long id){
+    public void delete(@PathVariable("id") long id) {
         homeService.delete(id);
     }
 

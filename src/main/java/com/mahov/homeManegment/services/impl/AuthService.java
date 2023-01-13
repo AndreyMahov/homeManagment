@@ -53,7 +53,7 @@ public class AuthService {
         this.jwtUtils = jwtUtils;
     }
 
-    public JwtResponse authUser(LoginRequest loginRequest){
+    public JwtResponse authUser(LoginRequest loginRequest) {
 
         Authentication authentication = authenticationManager
                 .authenticate(new UsernamePasswordAuthenticationToken(

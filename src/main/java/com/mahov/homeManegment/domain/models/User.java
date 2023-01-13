@@ -1,6 +1,5 @@
 package com.mahov.homeManegment.domain.models;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -28,7 +27,7 @@ public class User {
     @Column(name = "age")
     private int age;
 
-    @Column(name = "login",unique = true)
+    @Column(name = "login", unique = true)
     private String login;
 
     @Column(name = "password")

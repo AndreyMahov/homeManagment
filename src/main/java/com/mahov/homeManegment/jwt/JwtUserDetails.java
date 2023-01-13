@@ -13,13 +13,13 @@ import java.util.stream.Collectors;
 public class JwtUserDetails implements UserDetails {
 
     private static final long serialVersionUID = 1L;
-    private Long id;
-    private String login;
+    private final Long id;
+    private final String login;
 
     @JsonIgnore
-    private String password;
+    private final String password;
 
-    private List<? extends GrantedAuthority> grantedAuthorities;
+    private final List<? extends GrantedAuthority> grantedAuthorities;
 
     public JwtUserDetails(Long id, String login, String password, List<? extends GrantedAuthority> grantedAuthorities) {
         this.id = id;

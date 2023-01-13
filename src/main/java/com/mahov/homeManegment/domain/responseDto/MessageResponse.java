@@ -1,10 +1,5 @@
 package com.mahov.homeManegment.domain.responseDto;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-
-
 public class MessageResponse {
     private String message;
 
